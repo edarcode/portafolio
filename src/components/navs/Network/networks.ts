@@ -1,8 +1,8 @@
-import Discord from "../icons/Discord.astro";
-import Github from "../icons/Github.astro";
-import Instagram from "../icons/Instagram.astro";
-import Linkedin from "../icons/Linkedin.astro";
-import Youtube from "../icons/Youtube.astro";
+import Discord from "../../icons/Discord.astro";
+import Github from "../../icons/Github.astro";
+import Instagram from "../../icons/Instagram.astro";
+import Linkedin from "../../icons/Linkedin.astro";
+import Youtube from "../../icons/Youtube.astro";
 
 export const NETWORKS = [
   {
