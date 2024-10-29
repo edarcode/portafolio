@@ -1,0 +1,27 @@
+---
+interface Props {
+  href: string;
+  download: string;
+}
+
+const { href, download } = Astro.props;
+---
+
+<a download={download} href={href}>
+  <slot />
+</a>
+
+<style>
+  a {
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--md);
+    background-color: var(--secondary);
+    cursor: pointer;
+    padding: 0 var(--md);
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+</style>

@@ -1,3 +1,7 @@
+---
+import Download from "../Download/Download.astro";
+---
+
 <article>
   <div>
     <h1>Edwin Ortiz</h1>
@@ -9,12 +13,17 @@
     </p>
   </div>
   <img src="/edarcode.webp" alt="edarcode" />
+  <Download download="cv_edarcode" href="/cv.pdf">Currículum</Download>
 </article>
 
 <style>
   article {
-    display: flex;
-    flex-wrap: wrap;
+    padding: var(--lg);
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    gap: var(--md);
+    grid-template-columns: auto 1fr;
 
     div {
       max-width: 500px;
@@ -27,6 +36,11 @@
     img {
       width: 200px;
       border-radius: 50%;
+      grid-row: span 2;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
   }
 </style>
