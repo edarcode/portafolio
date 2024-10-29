@@ -1,12 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner/Banner.astro";
+import Experience from "../components/any/Experience/Experience.astro";
 ---
 
 <Layout title="edarcode">
   <main>
     <Banner />
+    <Experience />
   </main>
 </Layout>
 
-<style></style>
+<style>
+  main {
+    padding: var(--lg);
+  }
+</style>
