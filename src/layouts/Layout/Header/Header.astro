@@ -1,7 +1,7 @@
 ---
 import Anchor from "../../../components/hyperlinks/Anchor/Anchor.astro";
 import Logo from "../../../components/logos/Logo/Logo.astro";
-import { ROUTER } from "../../../pages/index/router";
+import { ROUTER } from "../../../pages/router";
 ---
 
 <header>
@@ -9,7 +9,7 @@ import { ROUTER } from "../../../pages/index/router";
     <Anchor cls={["logo"]} href={ROUTER.index.href}><Logo /></Anchor>
     <Anchor href={ROUTER.index.href}>{ROUTER.index.display}</Anchor>
     <Anchor href={ROUTER.utils.href}>{ROUTER.utils.display}</Anchor>
-    <Anchor href={ROUTER.components.href}>{ROUTER.components.display}</Anchor>
+    <Anchor href={ROUTER.look.href}>{ROUTER.look.display}</Anchor>
   </nav>
 </header>
 

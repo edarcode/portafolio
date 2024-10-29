@@ -1,12 +1,12 @@
-import { CLIENT_BASE_URL } from "../../consts/urls";
+import { CLIENT_BASE_URL } from "../consts/urls";
 
 export const ROUTER = {
   index: {
     href: `${CLIENT_BASE_URL}/`,
     display: "Inicio",
   },
-  components: {
-    href: `${CLIENT_BASE_URL}/components`,
+  look: {
+    href: `${CLIENT_BASE_URL}/look`,
     display: "Componentes",
   },
   utils: {
