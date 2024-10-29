@@ -2,12 +2,13 @@
 interface Props {
   href: string;
   download: string;
+  title?: string;
 }
 
-const { href, download } = Astro.props;
+const { href, download, title } = Astro.props;
 ---
 
-<a download={download} href={href}>
+<a download={download} href={href} title={title}>
   <slot />
 </a>
 
@@ -19,6 +20,9 @@ const { href, download } = Astro.props;
     background-color: var(--secondary);
     cursor: pointer;
     padding: 0 var(--md);
+    white-space: nowrap; /* Evita que el texto haga varias líneas */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Muestra los "..." cuando el texto se corta */
 
     &:active {
       transform: scale(0.95);

@@ -15,7 +15,9 @@ import Network from "../Network/Network.astro";
   </div>
   <img src="/edarcode.webp" alt="edarcode" />
   <div class="wrapper">
-    <Download download="cv_edarcode" href="/cv.pdf">Currículum</Download>
+    <Download title="Currículum" download="cv_edarcode" href="/cv.pdf"
+      >Currículum</Download
+    >
     <Network />
   </div>
 </article>
@@ -47,6 +49,7 @@ import Network from "../Network/Network.astro";
       display: flex;
       align-items: center;
       width: 100%;
+      gap: var(--md);
 
       article {
         margin-left: auto;
