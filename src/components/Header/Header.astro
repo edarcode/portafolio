@@ -6,7 +6,7 @@ import { ROUTER } from "../../pages/router";
 
 <header>
   <nav>
-    <Anchor href={ROUTER.index.href}><Logo /></Anchor>
+    <Anchor cls={["logo"]} href={ROUTER.index.href}><Logo /></Anchor>
     <Anchor href={ROUTER.index.href}>{ROUTER.index.display}</Anchor>
     <Anchor href={ROUTER.utils.href}>{ROUTER.utils.display}</Anchor>
     <Anchor href={ROUTER.components.href}>{ROUTER.components.display}</Anchor>
@@ -25,7 +25,7 @@ import { ROUTER } from "../../pages/router";
       gap: var(--md);
       display: flex;
 
-      a:first-child {
+      .logo {
         margin-right: auto;
       }
     }

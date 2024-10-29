@@ -1,14 +1,17 @@
 ---
 interface Props {
   href: string;
+  cls?: string[];
 }
 
 const { href } = Astro.props;
 const { href: currentRoute } = Astro.url;
+const { cls } = Astro.props;
+
 const isActive = currentRoute === href;
 ---
 
-<a href={href} class={isActive ? "active" : ""}>
+<a href={href} class:list={[cls, { isActive }]}>
   <slot />
 </a>
 
@@ -23,7 +26,7 @@ const isActive = currentRoute === href;
     }
   }
 
-  .active {
+  .isActive {
     color: var(--primary);
   }
 </style>
