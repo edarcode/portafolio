@@ -1,0 +1,21 @@
+---
+import Experience from "../../components/any/Experience/Experience.astro";
+import Banner from "../../components/Banner/Banner.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="edarcode">
+  <main>
+    <Banner />
+    <Experience />
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: var(--lg);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
