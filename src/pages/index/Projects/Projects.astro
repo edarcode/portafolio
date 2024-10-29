@@ -1,0 +1,56 @@
+---
+import GoTo from "../../../components/hyperlinks/GoTo/GoTo.astro";
+import { PROJECTS } from "./projects";
+---
+
+<section>
+  <h2>Proyectos</h2>
+  <ul>
+    {
+      PROJECTS.map((item) => (
+        <li>
+          <article>
+            <h3>{item.title}</h3>
+            <p class="description">{item.description}</p>
+            <p>TI: {item.tools}</p>
+            {item.deploy && <GoTo href={item.deploy}>Sitio web.</GoTo>}
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  section {
+    h2 {
+    }
+
+    ul {
+      padding-left: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--lg);
+
+      li {
+        &::marker {
+          color: var(--primary);
+        }
+
+        article {
+          max-width: 320px;
+          display: grid;
+          justify-items: start;
+          gap: var(--md);
+
+          .description {
+          }
+
+          a {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -2,12 +2,14 @@
 import Layout from "../../layouts/Layout/Layout.astro";
 import Banner from "./Banner/Banner.astro";
 import Experience from "./Experience/Experience.astro";
+import Projects from "./Projects/Projects.astro";
 ---
 
 <Layout title="edarcode">
   <main>
     <Banner />
     <Experience />
+    <Projects />
   </main>
 </Layout>
 
@@ -17,5 +19,8 @@ import Experience from "./Experience/Experience.astro";
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    display: grid;
+    place-content: start;
+    gap: var(--xl);
   }
 </style>
