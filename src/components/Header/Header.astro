@@ -1,0 +1,33 @@
+---
+import Anchor from "../Anchor/Anchor.astro";
+import Logo from "../Logo/Logo.astro";
+import { ROUTER } from "../../pages/router";
+---
+
+<header>
+  <nav>
+    <Anchor href={ROUTER.index.href}><Logo /></Anchor>
+    <Anchor href={ROUTER.index.href}>{ROUTER.index.display}</Anchor>
+    <Anchor href={ROUTER.utils.href}>{ROUTER.utils.display}</Anchor>
+    <Anchor href={ROUTER.components.href}>{ROUTER.components.display}</Anchor>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: var(--bg-surf);
+    padding: var(--md);
+
+    nav {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: var(--md);
+      display: flex;
+
+      a:first-child {
+        margin-right: auto;
+      }
+    }
+  }
+</style>

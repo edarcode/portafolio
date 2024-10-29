@@ -1,0 +1,12 @@
+---
+import Anchor from "../../components/Anchor/Anchor.astro";
+import Layout from "../../layouts/Layout.astro";
+import { ROUTER } from "../router";
+---
+
+<Layout title="Utilidades">
+  <main>
+    <h1>Utilidades</h1>
+    <Anchor href={ROUTER.index.href}>{ROUTER.index.display}</Anchor>
+  </main>
+</Layout>
