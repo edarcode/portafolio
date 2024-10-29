@@ -1,9 +1,10 @@
 ---
 import Download from "../Download/Download.astro";
+import Network from "../Network/Network.astro";
 ---
 
 <article>
-  <div>
+  <div class="me">
     <h1>Edwin Ortiz</h1>
     <h2>Full Stack Developer</h2>
     <p>
@@ -13,7 +14,10 @@ import Download from "../Download/Download.astro";
     </p>
   </div>
   <img src="/edarcode.webp" alt="edarcode" />
-  <Download download="cv_edarcode" href="/cv.pdf">Currículum</Download>
+  <div class="wrapper">
+    <Download download="cv_edarcode" href="/cv.pdf">Currículum</Download>
+    <Network />
+  </div>
 </article>
 
 <style>
@@ -25,7 +29,7 @@ import Download from "../Download/Download.astro";
     gap: var(--md);
     grid-template-columns: auto 1fr;
 
-    div {
+    .me {
       max-width: 500px;
 
       h1 {
@@ -37,6 +41,16 @@ import Download from "../Download/Download.astro";
       width: 200px;
       border-radius: 50%;
       grid-row: span 2;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      article {
+        margin-left: auto;
+      }
     }
 
     @media (max-width: 768px) {
