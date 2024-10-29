@@ -33,8 +33,17 @@ import { PROJECTS } from "./projects";
       gap: var(--lg);
 
       li {
-        &::marker {
+        position: relative;
+        list-style: none;
+
+        &::before {
+          content: "•";
           color: var(--primary);
+          position: absolute;
+          top: calc(1rem / 2);
+          left: -1rem;
+          font-size: var(--xl);
+          line-height: 1rem;
         }
 
         article {
