@@ -2,9 +2,10 @@
 interface Props {
   href: string;
   cls?: string[];
+  title?: string;
 }
 
-const { href } = Astro.props;
+const { href, title } = Astro.props;
 const { href: currentRoute } = Astro.url;
 const { cls } = Astro.props;
 
@@ -16,6 +17,8 @@ const isActive = currentRoute === href;
   class:list={[cls, { isActive }]}
   target="_blank"
   rel="noopener noreferrer"
+  title={title}
+  aria-label={title}
 >
   <slot />
 </a>

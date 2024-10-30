@@ -4,7 +4,13 @@ import { NETWORKS } from "./networks";
 ---
 
 <article>
-  {NETWORKS.map(({ url, Icon }) => <GoTo href={url}>{<Icon />}</GoTo>)}
+  {
+    NETWORKS.map(({ url, Icon, display }) => (
+      <GoTo title={display} href={url}>
+        {<Icon />}
+      </GoTo>
+    ))
+  }
 </article>
 
 <style>
