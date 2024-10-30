@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/utils", "destination": "/utils" },
+    { "source": "/look", "destination": "/look" }
+  ]
+}
