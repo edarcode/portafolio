@@ -23,14 +23,14 @@ import { SKILLS } from "./skills";
   article {
     ul {
       display: grid;
-      justify-content: start;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: var(--sm);
 
       a {
         li {
+          padding: var(--sm) var(--md);
           &:hover {
             background-color: var(--bg-surf);
-            padding: var(--sm) var(--md);
           }
 
           list-style: none;
