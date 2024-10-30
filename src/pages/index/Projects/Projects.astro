@@ -27,27 +27,16 @@ import { PROJECTS } from "./projects";
     }
 
     ul {
-      padding-left: 18px;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: var(--lg);
 
       li {
         position: relative;
         list-style: none;
-
-        &::before {
-          content: "•";
-          color: var(--primary);
-          position: absolute;
-          top: calc(1rem / 2);
-          left: -1rem;
-          font-size: var(--xl);
-          line-height: 1rem;
-        }
+        max-width: 300px;
 
         article {
-          max-width: 320px;
           display: grid;
           justify-items: start;
           gap: var(--md);
