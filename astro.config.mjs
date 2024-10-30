@@ -11,6 +11,8 @@ export default defineConfig({
       "/": "./src/pages/index/index.astro",
       "/utils": "./src/pages/utils/utils.astro",
       "/look": "./src/pages/look/look.astro",
+
+      compliance: "@company/legal-pages/compliance.astro",
     }),
   ],
 });
