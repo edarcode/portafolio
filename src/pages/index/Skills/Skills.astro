@@ -8,12 +8,12 @@ import { SKILLS } from "./skills";
   <ul>
     {
       SKILLS.map(({ name, Icon, doc }) => (
-        <GoTo href={doc}>
-          <li>
+        <li>
+          <GoTo href={doc}>
             <span>{name}</span>
             <Icon />
-          </li>
-        </GoTo>
+          </GoTo>
+        </li>
       ))
     }
   </ul>
@@ -26,14 +26,15 @@ import { SKILLS } from "./skills";
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: var(--sm);
 
-      a {
-        li {
+      li {
+        list-style: none;
+
+        a {
           padding: var(--sm) var(--md);
           &:hover {
             background-color: var(--bg-surf);
           }
 
-          list-style: none;
           height: 32px;
           display: flex;
           align-items: center;
