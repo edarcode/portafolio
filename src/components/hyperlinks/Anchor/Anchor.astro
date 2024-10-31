@@ -4,9 +4,8 @@ interface Props {
   cls?: string[];
 }
 
-const { href } = Astro.props;
+const { href, cls } = Astro.props;
 const { pathname: currentRoute } = Astro.url;
-const { cls } = Astro.props;
 
 const isActive = currentRoute === href;
 ---
