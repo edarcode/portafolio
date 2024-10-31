@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { href } = Astro.props;
-const { href: currentRoute } = Astro.url;
+const { pathname: currentRoute } = Astro.url;
 const { cls } = Astro.props;
 
 const isActive = currentRoute === href;
