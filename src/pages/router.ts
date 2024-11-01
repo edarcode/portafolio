@@ -4,11 +4,11 @@ export const ROUTER = {
     display: "Inicio",
   },
   look: {
-    href: "/look",
+    href: "/look/",
     display: "Componentes",
   },
   utils: {
-    href: "/utils",
+    href: "/utils/",
     display: "Utilidades",
   },
 };
